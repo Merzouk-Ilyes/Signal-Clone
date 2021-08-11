@@ -5,6 +5,8 @@ import { StyleSheet, Text, View } from "react-native";
 import login from './screens/login'
 import Register from './screens/register'
 import Home from './screens/home'
+import AddChat from './screens/AddChat'
+import Chat from "./screens/Chat"
 const Stack = createNativeStackNavigator();
 export default function App() {
 
@@ -15,10 +17,12 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator  initialRouteName="Home" screenOptions={globalScreenOptions}>
+      <Stack.Navigator screenOptions={globalScreenOptions}>
         <Stack.Screen name="Login" component={login} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="AddChat" component={AddChat} />
+        <Stack.Screen name="Chat" component={Chat} />
       </Stack.Navigator>
     </NavigationContainer>
   );
