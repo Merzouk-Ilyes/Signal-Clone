@@ -32,9 +32,10 @@ const home = ({ navigation }) => {
       navigation.replace("Login")
     })
   }
+
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: "Jennie Kim",
+      title:auth?.currentUser?.displayName,
       headerStyle: { backgroundColor: "white" },
       headerTintColor: "black",
       headerLeft: () => (
@@ -62,6 +63,10 @@ const home = ({ navigation }) => {
       )
     });
   });
+
+    
+
+
  const enterChat = (id,chatName) => {
    navigation.navigate('Chat' ,{
      id,chatName
